@@ -14,16 +14,16 @@
 
 int main()
 {
-	Triangle triangle;
-	Quadrangle quadrangle;
-	RectangularTriangle rectangularTriangle;
-	IsoscelesTriangle isoscelesTriangle;
-	EqualateralTriangle equalateralTriangle;
-	Parallelogram parallelogram;
-	Rectangle rectangle;
-	Rhomb rhomb;
-	Square square;
 	try {
+		Triangle triangle;
+		Quadrangle quadrangle;
+		RectangularTriangle rectangularTriangle;
+		IsoscelesTriangle isoscelesTriangle;
+		EqualateralTriangle equalateralTriangle;
+		Parallelogram parallelogram;
+		Rectangle rectangle;
+		Rhomb rhomb;
+		Square square;
 		triangle.print_info();
 		quadrangle.print_info();
 		rectangularTriangle.print_info();

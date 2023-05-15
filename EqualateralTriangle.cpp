@@ -9,5 +9,16 @@ void EqualateralTriangle::print_info() {
 	std::cout << std::endl;
 }
 EqualateralTriangle::EqualateralTriangle() : Triangle(30, 30, 30, 60, 60, 60, "Equalateral triangle") {
-	if (a != c || a != b || b != c || A != C || A != B || B != C) { throw FigureExceptions(); }
+	if (Triangle::amount_sides() != 3)
+	{
+		throw FigureExceptions("You added incorrect amount of sides!");
+	}
+	else if (A + B + C != 180)
+	{
+		throw FigureExceptions("Incorrect amount of angles!");
+	}
+	else if (a != c || b != c || a != b || A != C || A != B || B != C)
+	{
+		throw FigureExceptions("Angles or sides don't equal!");
+	}
 }

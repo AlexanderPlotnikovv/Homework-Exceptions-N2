@@ -9,5 +9,16 @@ void Square::print_info() {
 	std::cout << std::endl;
 }
 Square::Square() : Quadrangle(20, 20, 20, 20, 90, 90, 90, 90, "Square") {
-	if (a1 != b1 || a1 != c1 || a1 != d1 || b1 != c1 || b1 != d1 || c1 != d1 || A1 != 90 || B1 != 90 || C1 != 90 || D1 != 90) {throw FigureExceptions(); }
+	if (Quadrangle::amount_sides() != 4)
+	{
+		throw FigureExceptions("You added incorrect amount of sides!");
+	}
+	else if (A1 + B1 + C1 + D1 != 360)
+	{
+		throw FigureExceptions("Incorrect amount of angles!");
+	}
+	else if (A1 != 90 || B1 != 90 || C1 != 90 || D1 != 90 || a1 != c1 || b1 != d1 || a1 != b1 || a1 != d1 || b1 != c1 || c1 != d1)
+	{
+		throw FigureExceptions("Angles or sides don't equal!");
+	}
 }

@@ -9,6 +9,17 @@ void Rhomb::print_info() {
 	std::cout << std::endl;
 }
 
-Rhomb::Rhomb() : Quadrangle(30, 30, 30, 30, 30, 40, 30, 40, "Rhomb") {
-	if (a1 != b1 || a1 != c1 || a1 != d1 || b1 != c1 || b1 != d1 || c1 != d1 || A1 != C1 || B1 != D1) { throw FigureExceptions(); }
+Rhomb::Rhomb() : Quadrangle(30, 30, 30, 30, 30, 150, 30, 150, "Rhomb") {
+	if (Quadrangle::amount_sides() != 4)
+	{
+		throw FigureExceptions("You added incorrect amount of sides!");
+	}
+	else if (A1 + B1 + C1 + D1 != 360)
+	{
+		throw FigureExceptions("Incorrect amount of angles!");
+	}
+	else if (A1 != C1 || B1 != D1 || a1 != c1 || b1 != d1 || a1 != b1 || a1 != d1 || b1 != c1 || c1 != d1)
+	{
+		throw FigureExceptions("Angles or sides don't equal!");
+	}
 }

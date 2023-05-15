@@ -8,6 +8,17 @@ void Parallelogram::print_info() {
 	std::cout << "Angles: A = " << A1 << ", B = " << B1 << ", C = " << C1 << ", D = " << D1 << std::endl;
 	std::cout << std::endl;
 }
-Parallelogram::Parallelogram() : Quadrangle(20, 30, 20, 30, 30, 40, 30, 40, "Parallelogram") {
-	if (a1 != c1 || b1 != d1 || A1 != C1 || B1 != D1) { throw FigureExceptions(); }
+Parallelogram::Parallelogram() : Quadrangle(20, 30, 20, 30, 140, 40, 140, 40, "Parallelogram") {
+	if (Quadrangle::amount_sides() != 4)
+	{
+		throw FigureExceptions("You added incorrect amount of sides!");
+	}
+	else if (A1 + B1 + C1 + D1 != 360)
+	{
+		throw FigureExceptions("Incorrect amount of angles!");
+	}
+	else if (A1!=C1||B1!=D1||a1!=c1||b1!=d1)
+	{
+		throw FigureExceptions("Angles or sides don't equal!");
+	}
 }

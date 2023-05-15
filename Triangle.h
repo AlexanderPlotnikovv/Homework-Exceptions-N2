@@ -10,8 +10,8 @@ protected:
 	int A;
 	int B;
 	int C;
-	Triangle(int a, int b, int c, int A, int B, int C, std::string Name);
 public:
+	Triangle(int a, int b, int c, int A, int B, int C, std::string Name);
 	Triangle();
 	void print_info() override;
 	int amount_sides() override;
