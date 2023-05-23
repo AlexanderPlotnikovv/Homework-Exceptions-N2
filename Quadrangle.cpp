@@ -9,8 +9,10 @@ void Quadrangle::print_info() {
 	std::cout << std::endl;
 }
 int Quadrangle::amount_sides() { return 4; }
-Quadrangle::Quadrangle(int a1, int b1, int c1, int d1, int A1, int B1, int C1, int D1, std::string Name) : a1(a1), b1(b1), c1(c1), d1(d1), A1(A1), B1(B1), C1(C1), D1(D1), Figure(Name) {};
-Quadrangle::Quadrangle() : Quadrangle(10, 20, 30, 40, 50, 60, 170, 80, "Quadrangle") {
+Quadrangle::Quadrangle(int a1, int b1, int c1, int d1, int A1, int B1, int C1, int D1, std::string Name) : a1(a1), b1(b1), c1(c1), d1(d1), A1(A1), B1(B1), C1(C1), D1(D1), Figure(Name)
+
+{
+	print_info();
 	if (Quadrangle::amount_sides() != 4)
 	{
 		throw FigureExceptions("You added incorrect amount of sides!");

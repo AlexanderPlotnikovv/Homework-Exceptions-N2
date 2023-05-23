@@ -8,7 +8,7 @@ void EqualateralTriangle::print_info() {
 	std::cout << "Angles: A = " << A << ", B = " << B << ", C = " << C << std::endl;
 	std::cout << std::endl;
 }
-EqualateralTriangle::EqualateralTriangle() : Triangle(30, 30, 30, 60, 60, 60, "Equalateral triangle") {
+EqualateralTriangle::EqualateralTriangle(int a, int b, int c, int A, int B, int C, std::string Name) : EqualateralTriangle::Triangle(a, b, c, A, B, C, Name) {
 	if (Triangle::amount_sides() != 3)
 	{
 		throw FigureExceptions("You added incorrect amount of sides!");

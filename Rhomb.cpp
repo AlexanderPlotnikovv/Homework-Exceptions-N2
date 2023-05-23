@@ -9,7 +9,7 @@ void Rhomb::print_info() {
 	std::cout << std::endl;
 }
 
-Rhomb::Rhomb() : Quadrangle(30, 30, 30, 30, 30, 150, 30, 150, "Rhomb") {
+Rhomb::Rhomb(int a1, int b1, int c1, int d1, int A1, int B1, int C1, int D1, std::string Name) : Rhomb::Quadrangle(a1, b1, c1, d1, A1, B1, C1, D1, Name) {
 	if (Quadrangle::amount_sides() != 4)
 	{
 		throw FigureExceptions("You added incorrect amount of sides!");

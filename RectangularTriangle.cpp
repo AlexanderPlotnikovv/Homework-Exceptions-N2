@@ -8,7 +8,7 @@ void RectangularTriangle::print_info() {
 	std::cout << "Angles: A = " << A << ", B = " << B << ", C = " << C << std::endl;
 	std::cout << std::endl;
 }
-RectangularTriangle::RectangularTriangle() : Triangle(10, 20, 30, 50, 40, 90, "Rectangular triangle") {
+RectangularTriangle::RectangularTriangle(int a, int b, int c, int A, int B, int C, std::string Name) : RectangularTriangle::Triangle(a,b,c,A,B,C,Name) {
 	if (Triangle::amount_sides() != 3)
 	{
 		throw FigureExceptions("You added incorrect amount of sides!");
